@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Early stage diabetes risk prediction</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="">Early stage diabetes risk prediction </span></h2>
+            <div class='description'>
+    			<p>Check whether you are having diabetes or not by answering below.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="Age" placeholder="Age eg. 44" required>
+                <br>
+                <select class="form-input" name="Obesity" required>
+                    <option value="">Obesity.</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="Gender" required>
+                    <option value="">Gender</option>
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+                <br>
+                <select class="form-input" name="Polyuria" required>
+                    <option value="">Polyuria (excessive urine)</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="Polydipsia" required>
+                    <option value="">Polydipsia (excessive thirst)</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="sudden_weight_loss" required>
+                    <option value="">Sudden Weight Loss</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="weakness" required>
+                    <option value="">Weakness</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="Polyphagia" required>
+                    <option value="">Polyphagia (excesive eating)</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="Genital_thrush" required>
+                    <option value="">Genital Thrush </option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="visual_blurring" required>
+                    <option value="">Visual Blurring</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="Itching" required>
+                    <option value="">Itching</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="Irritability" required>
+                    <option value="">Irritability (feeling of agitation)</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="delayed_healing" required>
+                    <option value="">Delayed Healing</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="partial_paresis" required>
+                    <option value="">Partial Paresis (muscular weakness)</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="muscle_stiffness" required>
+                    <option value="">Muscle Stiffness</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <select class="form-input" name="Alopecia" required>
+                    <option value="">Alopecia (huge hair-fall)</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br>
+                <input type="submit" class="my-cta-button" value="Predict Result">
+        	</form>
+    	</div>
+
+
+    </body>
+</html>
